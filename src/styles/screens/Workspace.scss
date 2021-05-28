@@ -1,0 +1,275 @@
+.split {
+  display: flex;
+  flex-direction: row;
+  height: 91vh;
+  overflow: hidden;
+
+  h4 {
+    color: #505050;
+    font-weight: 500;
+    margin: 10px 0 0 10px;
+  }
+}
+
+.gutter {
+  background-color: #ebebeb;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
+  cursor: col-resize;
+  height: 100vh;
+}
+
+.gutter.gutter-vertical {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=");
+  cursor: row-resize;
+  pointer-events: none;
+}
+
+.name-field {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  button {
+    width: 10%;
+    cursor: pointer;
+  }
+
+  .run {
+    background-color: #097bed;
+    border: none;
+    color: $white;
+    font-size: $medium;
+    border-radius: 4px;
+  }
+
+  .save {
+    background-color: red;
+    border: none;
+    color: $white;
+    font-size: $large;
+    border-radius: 4px;
+  }
+}
+
+input[type="text"] {
+  height: 33px;
+  font-size: 18px;
+  width: 88%;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f2f2f2;
+  color: #505050;
+  outline: none;
+}
+
+::placeholder {
+  color: #a9a9a9;
+  font-size: $small;
+}
+
+.tabs {
+  height: 40px;
+  margin: 0px 0px 0 -30px;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  flex-wrap: nowrap;
+  span {
+    width: 90px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.indi-tab-active {
+  height: 16px;
+  min-width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 1px solid #e6e6e6;
+  border-top: 4px solid $primary;
+  font-size: $small * 0.8;
+  color: $black;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.indi-tab-inactive {
+  height: 20px;
+  min-width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 1px solid #e6e6e6;
+  font-size: $small * 0.8;
+  color: $black;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.add {
+  height: 29px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #e6e6e6;
+  font-size: $large;
+  color: $black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.saved {
+  padding: 10px;
+
+  input[type="text"] {
+    height: 33px;
+    font-size: 18px;
+    width: 98%;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f2f2f2;
+    color: #505050;
+    outline: none;
+  }
+
+  h6 {
+    font-weight: 500;
+    font-size: $medium;
+    margin-top: 10px;
+  }
+
+  p {
+    padding: 10px;
+    cursor: pointer;
+    font-size: $xs;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  p:hover {
+    background-color: #f2f2f2;
+  }
+  .saved-active {
+    background-color: #f2f2f2;
+  }
+
+  .saved-tab {
+    margin-top: 10px;
+    overflow: auto;
+    height: 80.5vh;
+    margin-right: -10px;
+  }
+}
+
+.empty-state {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: #888888;
+  }
+  button {
+    background-color: $secondary;
+    padding: 10px 40px;
+    border: none;
+    color: $white;
+    margin-top: 8px;
+    font-size: $medium;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+.side-bar {
+  width: 10%;
+  border-left: 1px solid #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button {
+    background-color: transparent;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    margin-top: 20px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.snackbar {
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #4caf50;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
