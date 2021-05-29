@@ -20,3 +20,5 @@
 2. All the styling is done using SCSS without any 3rd party library or styled components which helped in reducing the bundle size.
 3. Implemented code splitting for every element of the UI which is recommended by React to reduce bundle size.
 4. Used Fragments instead of divs to reduce DOM nodes.
+
+**Note:** All the data is stored using redux persist in the localstorage.
